@@ -9,7 +9,7 @@
 
 # Пошаговая установка:
 
-# 1. Клонировать репозиторий (если есть)
+# 1. Клонировать репозиторий
 git clone https://github.com/nakitava/vcf-contact-manager.git
 cd vcf-contact-manager
 
@@ -17,9 +17,9 @@ cd vcf-contact-manager
 python -m venv venv
 
 # 3. Активировать окружение
-# Windows:
+ Windows:
 venv\Scripts\activate
-# Linux/Mac:
+ Linux/Mac:
 source venv/bin/activate
 
 # 4. Установить зависимости
