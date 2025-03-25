@@ -10,7 +10,7 @@
 # Пошаговая установка:
 
 # 1. Клонировать репозиторий (если есть)
-git clone https://ваш_репозиторий.git
+git clone https://github.com/nakitava/vcf-contact-manager.git
 cd vcf-contact-manager
 
 # 2. Создать виртуальное окружение
