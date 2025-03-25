@@ -14,31 +14,22 @@ git clone https://github.com/nakitava/vcf-contact-manager.git
 cd vcf-contact-manager
 
 # 2. Создать виртуальное окружение
-python -m venv venv
+python -m venv practice228
 
 # 3. Активировать окружение
  Windows:
-venv\Scripts\activate
+practice228\Scripts\activate
+
  Linux/Mac:
-source venv/bin/activate
+source practice228/bin/activate
 
 # 4. Установить зависимости
-pip install -r requirements.txt
+pip install flask vobject csv os io
 
-# 5. Создать папки
-mkdir -p static/images uploads
-
-Запуск приложения
+# 5. Запуск приложения
 python app.py
 
-
-Настройки (app.py)
-app.config.update({
-    'UPLOAD_FOLDER': 'uploads',       # Папка для загруженных файлов
-    'MAX_CONTENT_LENGTH': 16 * 1024 * 1024,  # Макс. размер файла 16MB
-    'ALLOWED_EXTENSIONS': {'vcf'}     # Разрешенные расширения
-})
-
+Файл .csv для проверки работы сайта расположен в папке vcf-contact-manager/uploads 
 
 # Руководство пользователя
 Основные функции
@@ -46,6 +37,7 @@ app.config.update({
 Загрузка VCF-файла через кнопку или перетаскивание
 
 Поддерживается только формат .vcf
+Файл .csv для проверки работы сайта расположен в папке vcf-contact-manager/uploads 
 
 2. Просмотр контактов
 Таблица с контактами (имя, организация, телефоны, email)
