@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить контакт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Новый контакт</h1>
+
+        <form method="post" class="contact-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input type="text" name="first_name" placeholder="Иван">
+                </div>
+
+                <div class="form-group">
+                    <label>Фамилия</label>
+                    <input type="text" name="last_name" placeholder="Иванов">
+                </div>
+
+                <div class="form-group">
+                    <label>Организация</label>
+                    <input type="text" name="org" placeholder="Компания">
+                </div>
+
+                <div class="form-group">
+                    <label>Должность</label>
+                    <input type="text" name="title" placeholder="Должность">
+                </div>
+
+                <div class="form-group">
+                    <label>Рабочий телефон</label>
+                    <input type="text" name="tel_work" placeholder="+7 (123) 456-78-90">
+                </div>
+
+                <div class="form-group">
+                    <label>Домашний телефон</label>
+                    <input type="text" name="tel_home" placeholder="+7 (123) 456-78-90">
+                </div>
+
+                <div class="form-group">
+                    <label>Мобильный телефон</label>
+                    <input type="text" name="tel_mobile" placeholder="+7 (123) 456-78-90">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" placeholder="ivanov@example.com">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Адрес</label>
+                    <input type="text" name="address" placeholder="Город, улица, дом">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Заметка</label>
+                    <textarea name="note" placeholder="Дополнительная информация"></textarea>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn gradient-btn">
+                    💾 Сохранить
+                </button>
+                <a href="/view" class="btn btn-outline">Отмена</a>
+            </div>
+        </form>
+    </div>
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class="corner-logo">
+</body>
+</html>

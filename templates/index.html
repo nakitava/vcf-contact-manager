@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VCF Contact Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container main-container">
+        <h1>Контакты</h1>
+
+        <form method="post" action="/upload" enctype="multipart/form-data" class="upload-form">
+            <div class="file-upload-card">
+                <label for="file-upload" class="file-upload-label">
+                    <div class="upload-icon">📁</div>
+                    <div class="upload-text">Выберите файл .vcf</div>
+                    <div class="upload-hint">или перетащите его сюда</div>
+                </label>
+                <input id="file-upload" type="file" name="file" accept=".vcf" class="file-upload-input">
+                <div id="file-name" class="file-name-display"></div>
+            </div>
+
+            <button type="submit" class="btn gradient-btn upload-btn">
+                Загрузить файл
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('file-upload').addEventListener('change', function(e) {
+            const fileName = e.target.files[0]?.name || 'Файл не выбран';
+            document.getElementById('file-name').textContent = fileName;
+            document.getElementById('file-name').style.display = 'block';
+        });
+
+        // Анимация при перетаскивании файла
+        const uploadCard = document.querySelector('.file-upload-card');
+        uploadCard.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadCard.classList.add('dragover');
+        });
+
+        uploadCard.addEventListener('dragleave', () => {
+            uploadCard.classList.remove('dragover');
+        });
+
+        uploadCard.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadCard.classList.remove('dragover');
+            if (e.dataTransfer.files.length) {
+                document.getElementById('file-upload').files = e.dataTransfer.files;
+                const event = new Event('change');
+                document.getElementById('file-upload').dispatchEvent(event);
+            }
+        });
+    </script>
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class="corner-logo">
+</body>
+</html>

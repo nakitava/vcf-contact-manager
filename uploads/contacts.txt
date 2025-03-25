@@ -1,0 +1,22 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Алексей Петров
+N:Петров;Алексей;;;
+TEL;TYPE=WORK:111222333
+TEL;TYPE=CELL:444555666
+EMAIL:petrov@example.com
+ORG:IT Отдел
+TITLE:Разработчик
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+FN:Мария Сидорова
+N:Сидорова;Мария;;;
+TEL;TYPE=WORK:777888999
+TEL;TYPE=HOME:000111222
+EMAIL:sidorova@company.com
+ORG:Бухгалтерия
+TITLE:Главный бухгалтер
+ADR;TYPE=WORK:;;ул. Центральная 1;Москва;;101000;Россия
+END:VCARD

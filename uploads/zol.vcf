@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Золотарева Светлана
+N:Золотарева;Светлана;;;
+ORG:2023-ФГиИБ-ПИ-1б
+TITLE:Студентка
+TEL;TYPE=WORK,VOICE:+7 (123) 456-78-90
+EMAIL;TYPE=WORK,INTERNET:svetlana.zolotareva@example.com
+URL:https://example.com
+ADR;TYPE=WORK:;;ул. Примерная, д. 123, кв. 45;Москва;;123456;Россия
+NOTE:Программа была написана студенткой 2023-ФГиИБ-ПИ-1б Золотаревой Светланой.
+END:VCARD

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Контакты</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Ваши контакты</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Имя</th>
+                    <th>Организация</th>
+                    <th>Рабочий телефон</th>
+                    <th>Мобильный</th>
+                    <th>Email</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for contact in contacts %}
+                <tr>
+                    <td>{{ contact.first_name }} {{ contact.last_name }}</td>
+                    <td>{{ contact.org }}</td>
+                    <td>{{ contact.tel_work }}</td>
+                    <td>{{ contact.tel_mobile }}</td>
+                    <td>{{ contact.email }}</td>
+                    <td>
+                        <a href="/edit/{{ loop.index0 }}" class="btn-small">✏️</a>
+                        <a href="/delete/{{ loop.index0 }}" class="btn-small btn-delete">🗑️</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Перенесенный блок кнопок под таблицу -->
+        <div class="button-row">
+            <a href="/" class="btn gradient-btn">← На главную</a>
+            <a href="/add" class="btn gradient-btn">➕ Добавить контакт</a>
+            <a href="/export/vcf" class="btn gradient-btn">💾 Скачать VCF</a>
+            <a href="/export/csv" class="btn gradient-btn">📊 Скачать CSV</a>
+        </div>
+    </div>
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class="corner-logo">
+</body>
+</html>

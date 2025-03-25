@@ -1,0 +1,31 @@
+BEGIN:VCARD
+VERSION:3.0
+EMAIL;TYPE=INTERNET:petrov@example.com
+FN:Алексей Петров
+N:Петров;Алексей;;;
+ORG:IT Отдел
+TEL;TYPE=WORK:111222333
+TEL;TYPE=CELL:444555666
+TITLE:Разработчик
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+ADR;TYPE=WORK:;;ул. Центральная 1 Москва 101000 Россия;;;;
+EMAIL;TYPE=INTERNET:sidorova@company.com
+FN:Мария Сидорова
+N:Сидорова;Мария;;;
+ORG:Бухгалтерия
+TEL;TYPE=WORK:777888999
+TEL;TYPE=HOME:000111222
+TITLE:Главный бухгалтер
+END:VCARD
+
+BEGIN:VCARD
+VERSION:3.0
+EMAIL;TYPE=INTERNET:akitavanaito@gmail.com
+FN:Светлана Золотарева
+N:Золотарева;Светлана;;;
+TEL;TYPE=WORK:89044246027
+END:VCARD
+

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Редактировать контакт</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>✏️ Редактировать контакт</h1>
+
+        <form method="post" class="contact-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input type="text" name="first_name" value="{{ contact.first_name }}">
+                </div>
+
+                <div class="form-group">
+                    <label>Фамилия</label>
+                    <input type="text" name="last_name" value="{{ contact.last_name }}">
+                </div>
+
+                <div class="form-group">
+                    <label>Организация</label>
+                    <input type="text" name="org" value="{{ contact.org }}">
+                </div>
+
+                <div class="form-group">
+                    <label>Должность</label>
+                    <input type="text" name="title" value="{{ contact.title }}">
+                </div>
+
+                <div class="form-group">
+                    <label>Рабочий телефон</label>
+                    <input type="text" name="tel_work" value="{{ contact.tel_work }}">
+                </div>
+
+                <div class="form-group">
+                    <label>Домашний телефон</label>
+                    <input type="text" name="tel_home" value="{{ contact.tel_home }}">
+                </div>
+
+                <div class="form-group">
+                    <label>Мобильный телефон</label>
+                    <input type="text" name="tel_mobile" value="{{ contact.tel_mobile }}">
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" name="email" value="{{ contact.email }}">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Адрес</label>
+                    <input type="text" name="address" value="{{ contact.address }}">
+                </div>
+
+                <div class="form-group full-width">
+                    <label>Заметка</label>
+                    <textarea name="note">{{ contact.note }}</textarea>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn gradient-btn">
+                    💾 Сохранить изменения
+                </button>
+                <a href="/view" class="btn btn-outline">Отмена</a>
+            </div>
+        </form>
+    </div>
+<img src="{{ url_for('static', filename='images/logo.png') }}" alt="Логотип" class="corner-logo">
+</body>
+</html>
